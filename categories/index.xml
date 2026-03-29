@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on CMCV Trader | Blog</title>
-    <link>https://cmcvtrader.github.io/h/categories/</link>
+    <link>https://cmcvtrader.github.io/cmcvtrader/h/categories/</link>
     <description>Recent content in Categories on CMCV Trader | Blog</description>
     <generator>Hugo</generator>
     <language>es-es</language>
-    <atom:link href="https://cmcvtrader.github.io/h/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cmcvtrader.github.io/cmcvtrader/h/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
