@@ -14,30 +14,31 @@
 
     <style>
         :root {
-            --marble: #fafaf9; --concrete: #e7e5e4; --gold: #f59e0b;
-            --gold-d: #d97706; --sage: #84cc16; --olive: #65a30d;
-            --ink: #292524; --pad: clamp(20px, 5vw, 48px);
+            --marble-white: #fafaf9;
+            --concrete: #e7e5e4;
+            --gold: #f59e0b;
+            --sage-green: #84cc16;
+            --text-dark: #292524;
+            --pad: clamp(20px, 5vw, 48px);
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
             font-family: 'Outfit', sans-serif; 
-            background: var(--marble); 
-            color: var(--ink); 
+            background: var(--marble-white); 
+            color: var(--text-dark); 
             overflow-x: hidden; 
             line-height: 1.6;
         }
 
-         
         body::before {
             content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.03;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
         .container { max-width: 1200px; margin: 0 auto; }
-        .section-pad { padding: 100px var(--pad); }
-
+        
          
         #navbar { 
             position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-index: 1000; 
@@ -48,29 +49,26 @@
             box-shadow: 0 8px 32px rgba(41, 37, 36, 0.08); 
         }
 
-        .nav-logo { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.2rem; color: var(--text-dark); text-decoration: none; }
         .nav-logo em { color: var(--gold); font-style: italic; }
 
         .nav-links { display: flex; gap: 24px; list-style: none; }
-        .nav-links a { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink); text-decoration: none; opacity: 0.6; transition: 0.3s; }
+        .nav-links a { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dark); text-decoration: none; opacity: 0.6; transition: 0.3s; }
         .nav-links a:hover { opacity: 1; color: var(--gold); }
 
-        .nav-cta { font-size: 0.8rem; font-weight: 700; color: white; background: var(--ink); padding: 12px 24px; border-radius: 100px; text-decoration: none; transition: 0.3s; }
+        .nav-cta { font-size: 0.8rem; font-weight: 700; color: white; background: var(--text-dark); padding: 12px 24px; border-radius: 100px; text-decoration: none; transition: 0.3s; }
         .nav-cta:hover { background: var(--gold); transform: translateY(-2px); }
 
          
-        .hero { min-height: 100svh; display: flex; align-items: center; position: relative; overflow: hidden; background: #000; padding: 0 var(--pad); }
-        .hero-bg-img { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2400&q=85'); background-size: cover; background-position: center; opacity: 0.55; }
-        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)); z-index: 1; }
-        
         .btn-primary { background: var(--gold); color: white; padding: 18px 36px; border-radius: 100px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; display: inline-flex; transition: 0.3s; border: none; cursor: pointer; }
-        .btn-primary:hover { background: var(--gold-d); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3); }
+        .btn-primary:hover { background: #d97706; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3); }
 
          
-        footer { background: var(--ink); color: white; padding: 80px var(--pad) 40px; margin-top: 0; }
+        footer { background: var(--text-dark); color: white; padding: 80px var(--pad) 40px; margin-top: 0; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 60px; }
-        .footer-link { color: white; text-decoration: none; opacity: 0.6; font-size: 0.9rem; transition: 0.3s; }
+        .footer-link { color: white; text-decoration: none; opacity: 0.6; font-size: 0.9rem; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
         .footer-link:hover { opacity: 1; color: var(--gold); }
+        .social-icon { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -101,6 +99,7 @@
                 <div class="nav-logo" style="color: white; margin-bottom: 20px;">Maximiliano <em>Castillo</em></div>
                 <p style="opacity: 0.5; font-size: 0.85rem;">Estratega Digital especializado en resultados premium.</p>
             </div>
+            
             <div>
                 <h4 style="color: var(--gold); margin-bottom: 20px; font-family: 'Cormorant Garamond';">Navegación</h4>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -109,28 +108,47 @@
                     <a href="/cmcvtrader/#contacto" class="footer-link">Contacto</a>
                 </div>
             </div>
+
             <div>
-                <h4 style="color: var(--gold); margin-bottom: 20px; font-family: 'Cormorant Garamond';">Recursos</h4>
-                <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <a href="/cmcvtrader/h/" class="footer-link">Blog & Estrategia</a>
-                    <a href="https://wa.me/34635558042" class="footer-link">WhatsApp Directo</a>
+                <h4 style="color: var(--gold); margin-bottom: 20px; font-family: 'Cormorant Garamond';">Conecta Conmigo</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="https://www.linkedin.com/in/cmcvtrader/" target="_blank" class="footer-link">
+                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/cmcvtrader" target="_blank" class="footer-link">
+                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        GitHub
+                    </a>
+                    <a href="https://x.com/cmcvtrader" target="_blank" class="footer-link">
+                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+                        X (Twitter)
+                    </a>
+                    <a href="https://www.instagram.com/cmcvtrader" target="_blank" class="footer-link">
+                        <svg class="social-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        Instagram
+                    </a>
+                    <a href="https://www.facebook.com/cmcvtrader" target="_blank" class="footer-link">
+                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        Facebook
+                    </a>
                 </div>
             </div>
         </div>
+        
         <div class="container" style="padding-top: 40px; display: flex; justify-content: space-between; align-items: center; opacity: 0.4; font-size: 0.75rem;">
             <p>© 2026 Maximiliano Castillo. Todos los derechos reservados.</p>
             <a href="#admin" style="color: var(--gold); text-decoration: none;">CRM Login</a>
         </div>
     </footer>
 
-    <a href="https://wa.me/34635558042" style="position:fixed; bottom:30px; right:30px; z-index:999; background:var(--olive); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 25px rgba(0,0,0,0.2); text-decoration:none;">
+    <a href="https://wa.me/34635558042" style="position:fixed; bottom:30px; right:30px; z-index:999; background:var(--sage-green); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 25px rgba(0,0,0,0.2); text-decoration:none;">
         <svg viewBox="0 0 24 24" style="width:30px; fill:white;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
     </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             gsap.registerPlugin(ScrollTrigger);
-            gsap.from(".hero-content", { opacity: 0, y: 30, duration: 1.2, ease: "power4.out" });
         });
     </script>
 </body>
