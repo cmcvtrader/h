@@ -2,9 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cmcvtrader.github.io/cmcvtrader/h/posts/como-monte-este-blog-en-hugo/</loc>
+  </url><url>
     <loc>https://cmcvtrader.github.io/cmcvtrader/h/categories/</loc>
   </url><url>
     <loc>https://cmcvtrader.github.io/cmcvtrader/h/</loc>
+  </url><url>
+    <loc>https://cmcvtrader.github.io/cmcvtrader/h/posts/</loc>
   </url><url>
     <loc>https://cmcvtrader.github.io/cmcvtrader/h/tags/</loc>
   </url>
