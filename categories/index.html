@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | CMCV Trader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    
+    <style>
+        :root {
+            --marble: #fafaf9; --concrete: #e7e5e4; --gold: #f59e0b;
+            --gold-d: #d97706; --sage: #84cc16; --olive: #65a30d;
+            --ink: #292524; --pad: clamp(20px, 5vw, 48px);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Outfit', sans-serif; background: var(--marble); color: var(--ink); overflow-x: hidden; }
+        body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 180px; }
+        #navbar { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-index: 1000; width: min(860px, calc(100% - 24px)); display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: rgba(250, 250, 249, 0.88); backdrop-filter: blur(20px); border: 1px solid var(--concrete); border-radius: 100px; box-shadow: 0 6px 24px rgba(41, 37, 36, 0.06); }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.1rem; color: var(--ink); text-decoration: none; }
+        .nav-logo em { color: var(--gold); font-style: italic; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { font-size: 0.78rem; font-weight: 500; text-transform: uppercase; color: var(--ink); text-decoration: none; opacity: 0.6; }
+        .nav-cta { font-size: 0.78rem; font-weight: 600; color: white; background: var(--ink); padding: 10px 20px; border-radius: 100px; text-decoration: none; }
+        .hero { min-height: 100svh; display: flex; align-items: center; padding: 120px var(--pad); position: relative; overflow: hidden; background: #111; }
+        .hero-bg-img { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2400&q=85'); background-size: cover; background-position: center 35%; opacity: 0.6; transform: scale(1.04); animation: heroZoom 14s ease-out forwards; }
+        @keyframes heroZoom { from { transform: scale(1.08); } to { transform: scale(1.0); } }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(15,10,5,0.82) 0%, rgba(20,14,6,0.65) 45%, rgba(41,37,36,0.55) 70%, rgba(30,20,5,0.7) 100%); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; max-width: 760px; color: white; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 9vw, 7.5rem); font-weight: 700; line-height: 1.0; color: #fff; }
+        .hero h1 em { color: var(--gold); font-style: italic; }
+        .btn-primary { background: var(--gold); color: white; padding: 16px 32px; border-radius: 100px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; display: inline-flex; }
+        
+         
+        #crm-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); backdrop-filter:blur(8px); z-index:9000; align-items:center; justify-content:center; }
+        #crm-overlay.open { display:flex; }
+        #crm-panel { background:var(--marble); border-radius:20px; width:min(96vw,1080px); max-height:90vh; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 32px 80px rgba(0,0,0,0.25); }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="/" class="nav-logo">Maximiliano <em>Castillo</em></a>
+        <ul class="nav-links">
+            <li><a href="/posts">Blog</a></li>
+            <li><a href="/#metodo">Método</a></li>
+        </ul>
+        <a href="/#contacto" class="nav-cta">Trabajar conmigo →</a>
+    </nav>
+
+    
+<header class="page-header">
+    <h1>Categories</h1>
+</header>
+
+<ul class="terms-tags">
+</ul>
+
+    <footer style="padding: 40px var(--pad); border-top: 1px solid var(--concrete); text-align: center;">
+        <p>© 2026 CMCV Trader · Estrategia Digital</p>
+    </footer>
+
+    <a href="https://wa.me/34635558042" style="position:fixed; bottom:28px; right:28px; z-index:999; width:60px; height:60px; border-radius:50%; background:var(--olive); color:white; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 24px rgba(101,163,13,0.4); text-decoration:none;">
+        <svg viewBox="0 0 24 24" style="width:32px; fill:white;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from(".hero-content", { opacity: 0, y: 30, duration: 1, ease: "power3.out" });
+        });
+        function checkHash() { if (location.hash === '#admin') document.getElementById('crm-overlay').classList.add('open'); }
+        window.addEventListener('hashchange', checkHash);
+        checkHash();
+    </script>
+</body>
+</html>
