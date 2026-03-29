@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Desarrollo Web on CMCV Trader | Blog</title>
+    <link>https://cmcvtrader.github.io/h/tags/desarrollo-web/</link>
+    <description>Recent content in Desarrollo Web on CMCV Trader | Blog</description>
+    <generator>Hugo</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://cmcvtrader.github.io/h/tags/desarrollo-web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Odisea estática: Cómo integré Hugo en mi web (y los errores que casi me hacen desistir)</title>
+      <link>https://cmcvtrader.github.io/h/posts/como-monte-este-blog-en-hugo/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://cmcvtrader.github.io/h/posts/como-monte-este-blog-en-hugo/</guid>
+      <description>&lt;p&gt;Como Estratega Digital, mi trabajo es optimizar los ecosistemas de venta de mis clientes para que funcionen como máquinas de reloj suizo. Pero cuando decidí montar mi propio blog usando &lt;strong&gt;Hugo&lt;/strong&gt; (un generador de sitios estáticos ultrarrápido), me di cuenta de que hasta los estrategas necesitamos ensuciarnos las manos con el código de vez en cuando.&lt;/p&gt;&#xA;&lt;p&gt;El objetivo era claro: quería un blog que cargara en milisegundos, alojado de forma gratuita y que mantuviera mi diseño premium con animaciones GSAP, todo integrado dentro de mi web principal en GitHub Pages.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
