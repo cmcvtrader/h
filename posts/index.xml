@@ -6,8 +6,15 @@
     <description>Recent content in Posts on CMCV Trader | Blog</description>
     <generator>Hugo</generator>
     <language>es-es</language>
-    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 22:00:00 +0200</lastBuildDate>
     <atom:link href="https://cmcvtrader.github.io/h/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La odisea del Mac mini 2011: Pánico, USB muertos y resurrección</title>
+      <link>https://cmcvtrader.github.io/h/posts/odisea-mac-mini-2011/</link>
+      <pubDate>Fri, 17 Apr 2026 22:00:00 +0200</pubDate>
+      <guid>https://cmcvtrader.github.io/h/posts/odisea-mac-mini-2011/</guid>
+      <description>Una historia de ambición técnica que casi termina en desastre. Cómo un Mac mini veterano pasó de ser una gran compra a un pisapapeles de aluminio, y cómo logré rescatarlo.</description>
+    </item>
     <item>
       <title>Odisea estática: Cómo integré Hugo en mi web (y los errores que casi me hacen desistir)</title>
       <link>https://cmcvtrader.github.io/h/posts/como-monte-este-blog-en-hugo/</link>
